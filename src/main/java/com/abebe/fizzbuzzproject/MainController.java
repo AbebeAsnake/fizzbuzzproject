@@ -9,12 +9,14 @@ public class MainController {
     public String fizz()
     {
         String value="";
-        String number="";
-        int end ;
+        int counter1=0;
+        int counter2=0;
+        int counter3=0;
+        int endNumber ;
         Scanner keyBoard = new Scanner(System.in);
         System.out.println("please inter the end number");
-        end= keyBoard.nextInt();
-     for(int i=1;i<=end;i++){
+        endNumber= keyBoard.nextInt();
+     for(int i=1;i<=endNumber;i++){
          if(i%3 ==0 && i%5==0){
              value +="FizzBuzz" +"\r\n<br/>";
          }
@@ -26,19 +28,23 @@ public class MainController {
          }
          else{
              value += Integer.toString(i)+"\r\n<br/>";
-     }
+         }
          if(i%7==0){
-             number +=i+"\n";
+             counter1++;
          }
              else if(i%13==0){
-             number +=i +"\n";
+             counter2++;
          }
          else if(i%17==0){
-           number +=i +"\n";
+             counter3++;
          }
      }
         System.out.println(value);
-        System.out.println(number);
-        return value + number;
+        System.out.println("the counting of multiple of 7 is : " + counter1);
+        System.out.println("the counting of multiple of 13 is : " + counter2);
+        System.out.println("the counting of multiple of 17 is : " + counter3);
+        return value +"the counting of multiple of 7 is :"+ counter1 +"<br/>"+
+                "the counting of multiple of 13 is :"+counter2 +"<br/>"+
+                "the counting of multiple of 17 is :"+counter3;
     }
 }
