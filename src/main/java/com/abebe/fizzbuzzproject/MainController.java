@@ -11,6 +11,7 @@ public class MainController {
     public String ShowIndex()
     {
         String value="";
+        String number="";
         int start;
         int end ;
         Scanner keyBoard = new Scanner(System.in);
@@ -31,9 +32,18 @@ public class MainController {
          else{
              value += Integer.toString(i)+"\r\n";
      }
+         if(i%7==0){
+             number +=i+"\n";
+         }
+             else if(i%13==0){
+             number +=i +"\n";
+         }
+         else if(i%17==0){
+           number +=i +"\n";
+         }
      }
         System.out.println(value);
-        return value;
-
+        System.out.println(number);
+        return value + number;
     }
 }
