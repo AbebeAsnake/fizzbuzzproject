@@ -9,10 +9,7 @@ public class MainController {
     public String fizz()
     {
         String value="";
-        int counter1=0;
-        int counter2=0;
-        int counter3=0;
-        int endNumber ;
+        int counter1=0,counter2=0,counter3=0,endNumber ;
         Scanner keyBoard = new Scanner(System.in);
         System.out.println("please inter the end number");
         endNumber= keyBoard.nextInt();
