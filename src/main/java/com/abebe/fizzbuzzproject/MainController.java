@@ -26,10 +26,25 @@ public class MainController {
          else{
              value += Integer.toString(i)+"\r\n<br/>";
          }
-         if(i%7==0){
+         if (i % 7 == 0 && i % 17 == 0 && i % 23 == 0) {
+             counter1++;
+             counter2++;
+             counter3++;
+         } else if (i % 7 == 0 && i % 17 == 0) {
+             counter1++;
+             counter2++;
+         } else if (i % 7 == 0 && i % 23 == 0) {
+             counter1++;
+
+             counter3++;
+         } else if (i % 17 == 0 && i % 23 == 0) {
+             counter2++;
+             counter3++;
+         }
+         else if(i%7==0){
              counter1++;
          }
-             else if(i%13==0){
+         else if(i%13==0){
              counter2++;
          }
          else if(i%17==0){
