@@ -6,6 +6,27 @@ import java.util.Scanner;
 @RestController
 public class MainController {
     @RequestMapping(value="/")
+    public String buzz(){
+        String value="";
+
+        for(int i=1;i<=100;i++){
+            if(i%3 ==0 && i%5==0){
+                value +="FizzBuzz" +"\r\n<br/>";
+            }
+            else if(i%3==0){
+                value +="Fizz" +"\r\n<br/>";
+            }
+            else if(i%5==0){
+                value +="Buzz" +"\r\n<br/>";
+            }
+            else{
+                value += Integer.toString(i)+"\r\n<br/>";
+            }
+        }
+        System.out.println(value);
+        return value;
+    }
+    @RequestMapping(value="/home")
     public String fizz()
     {
         String value="";
@@ -59,4 +80,6 @@ public class MainController {
                 "the counting of multiple of 17 is :"+counter2 +"<br/>"+
                 "the counting of multiple of 23 is :"+counter3;
     }
-}
+
+    }
+
