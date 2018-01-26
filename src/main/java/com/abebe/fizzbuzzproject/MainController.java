@@ -44,19 +44,19 @@ public class MainController {
          else if(i%7==0){
              counter1++;
          }
-         else if(i%13==0){
+         else if(i%17==0){
              counter2++;
          }
-         else if(i%17==0){
+         else if(i%23==0){
              counter3++;
          }
      }
         System.out.println(value);
         System.out.println("the counting of multiple of 7 is : " + counter1);
-        System.out.println("the counting of multiple of 13 is : " + counter2);
-        System.out.println("the counting of multiple of 17 is : " + counter3);
+        System.out.println("the counting of multiple of 17 is : " + counter2);
+        System.out.println("the counting of multiple of 23 is : " + counter3);
         return value +"the counting of multiple of 7 is :"+ counter1 +"<br/>"+
-                "the counting of multiple of 13 is :"+counter2 +"<br/>"+
-                "the counting of multiple of 17 is :"+counter3;
+                "the counting of multiple of 17 is :"+counter2 +"<br/>"+
+                "the counting of multiple of 23 is :"+counter3;
     }
 }
